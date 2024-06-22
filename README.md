@@ -1,1 +1,2 @@
-# stf-awm
+# Atmospheric Water Machine - Website Interface
+**AWM** atau **Atmospheric Water Machine** merupakan sebuah alat pengubah udara menjadi air dengan bantuan energi surya dan IoT. Alat ini diharapkan mampu menjadi solusi kekeringan yang mampu memengaruhi ibadah qurban. Dalam implementasinya, alat ini perlu *interface* berupa tampilan *website* yang mudah diakses untuk mengelola informasi dan mengatur kecepatan *fan* AWM.
