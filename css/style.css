@@ -1,0 +1,319 @@
+:root {
+  --primary: #2d4f8b;
+  --bg: #c5deed;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #2d4f8b;
+  color: #000000;
+  /*min-height: 1000px;*/
+}
+
+/*Navbar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 4%;
+  background-color: rgba(45, 79, 139, 0.8);
+  border-bottom: 1px transparent #2d4f8b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-nav a {
+  color: var(--bg);
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #f8f272;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #f8f272;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--bg);
+}
+
+.navbar .navbar-logo span {
+  color: #f8f272;
+  font-style: italic;
+}
+
+.navbar .navbar-extra a {
+  color: var(--bg);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #f8f272;
+}
+
+#menu {
+  display: none;
+}
+
+/*hero section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(45, 79, 139, 1) 2%,
+    rgba(255, 255, 255, 0) 65%
+  );
+}
+
+.hero .content {
+  padding: 1.7rem 4%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 2em;
+  color: #2d4f8b;
+  text-shadow: rgba(45, 79, 139, 0.5);
+  line-height: 1.3;
+}
+
+.hero .content h1 span {
+  color: #dc9596;
+  font-style: italic;
+}
+
+.hero .content p {
+  .hero .content p {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    line-height: 1.5;
+    font-weight: 400; /* Corrected value */
+    text-shadow: 0 2px 4px rgba(45, 79, 139, 0.5);
+    mix-blend-mode: difference;
+  }
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #c5deed;
+  background-color: #2d4f8b;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(45, 79, 139, 0.5);
+}
+
+/* About section */
+.about {
+  padding: 10rem 0 6rem; /* Mengurangi padding atas dan bawah */
+  background-color: #2d4f8b; /* Warna latar belakang */
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #c5deed;
+}
+
+.about h2 span {
+  color: #f8f272; /* Warna span */
+}
+
+/* Team Profile Section */
+.team-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #2d4f8b;
+  margin-bottom: 3rem;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.team-member {
+  background-color: #fff; /* Warna latar belakang */
+  padding: 2rem; /* Padding di dalam elemen anggota tim */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  border-radius: 0.5rem; /* Sudut membulat */
+  width: calc(20% - 2rem); /* Lebar maksimal setiap anggota tim */
+  min-width: 150px; /* Lebar minimal untuk responsivitas */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.team-member img {
+  width: 100%;
+  height: 150px; /* Tinggi tetap untuk gambar */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 50%; /* Gambar bulat */
+  margin-bottom: 1.5rem;
+}
+
+.team-member h3 {
+  font-size: 0.8rem;
+  color: #2d4f8b;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.team-member p {
+  font-size: 0.7rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* AWM Explanation Section */
+.awm-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 10rem 0 8rem 4%; /* Penyesuaian padding untuk ruang di sekitar konten */
+}
+
+.awm-text {
+  flex: 1;
+  text-align: center; /* Memposisikan teks di tengah */
+}
+
+.awm-text h2 {
+  font-size: 3rem; /* Ukuran font untuk judul */
+  color: #f8f272;
+  margin-bottom: 1rem;
+}
+
+.awm-text p {
+  font-size: 1.3rem; /* Ukuran font untuk teks */
+  color: #c5deed;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.awm-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.awm-image img {
+  width: 100%; /* Lebarkan gambar untuk mengisi ruang yang tersedia */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/*media queries*/
+
+/*laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/*tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #ecf4f9;
+    width: 100%;
+    height: auto;
+    transition: right 0.3s ease;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar-nav a {
+    display: block;
+    padding: 1rem;
+    color: #2d4f8b;
+  }
+
+  .navbar-extra #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav a {
+    color: #2d4f8b;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform: scaleX(0);
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+/*mobile phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
